@@ -11,4 +11,5 @@ PUT	/profile	Update user profile
 PUT	/change-password	Change password
 POST	/forgot-password	Request password reset
 POST	/reset-password/:token	Reset password
-POST	/verify-email/:token	Verify email
+POST	/verify-email/:token	Verify email\
+
