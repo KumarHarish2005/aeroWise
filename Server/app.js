@@ -2,6 +2,9 @@ import express from "express";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 
+//Routers
+import userRouter from "./routes/user.route.js";
+
 const app = express();
 
 // Middleware
@@ -18,5 +21,10 @@ app.use(express.urlencoded({ extended: true }));
 app.get("/api/v1/health", (req, res) => {
     res.status(200).json({ message: "Server is healthy" });
 });
+
+//apis
+app.use("/api/v1/user",userRouter);
+
+
 
 export default app;
